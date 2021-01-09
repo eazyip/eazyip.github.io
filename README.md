@@ -1,1 +1,1 @@
-# Eazy-IP (Beta)
+# Eazy-IP (Frontend only)
