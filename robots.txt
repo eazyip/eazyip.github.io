@@ -6,4 +6,4 @@ Disallow: /*.ttf
 Disallow: /*.woff
 Disallow: /*.woff2
 Disallow: /*.svg
-Allow: /pages/
+Allow: /*.html

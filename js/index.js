@@ -15,18 +15,18 @@
 //*******************************************************
 // nav bar
 //*******************************************************
-if (window.location.pathname === "/pages/app") {
+if (window.location.pathname === "/app.html") {
     document.querySelector("#js-nav-app").classList.add("active-app");
     document.querySelector("#js-nav-app").classList.remove("inactive-app");
 } else if (
     window.location.pathname === "/" ||
     window.location.pathname === "/pages" ||
-    window.location.pathname === "/pages/index"
+    window.location.pathname === "/index.html"
 )
     document.querySelector("#js-nav-home").classList.add("current-nav-option");
-else if (window.location.pathname === "/pages/about")
+else if (window.location.pathname === "/about.html")
     document.querySelector("#js-nav-about").classList.add("current-nav-option");
-else if (window.location.pathname === "/pages/contact")
+else if (window.location.pathname === "/contact.html")
     document
         .querySelector("#js-nav-contact")
         .classList.add("current-nav-option");
@@ -42,24 +42,24 @@ else if (window.location.pathname === "/pages/contact")
 //*******************************************************
 // record visit
 //*******************************************************
-if (sessionStorage.getItem("visit") !== "recorded") {
-    fetch(`${window.location.origin}/apis/visit`)
-        .then((res) => {
-            // console.log(res);
+// if (sessionStorage.getItem("visit") !== "recorded") {
+//     fetch(`${window.location.origin}/apis/visit`)
+//         .then((res) => {
+//             // console.log(res);
 
-            if (res.status === 200) {
-                return res.text();
-            } else {
-                throw "server err";
-            }
-        })
-        .then((text) => {
-            // console.log(text);
+//             if (res.status === 200) {
+//                 return res.text();
+//             } else {
+//                 throw "server err";
+//             }
+//         })
+//         .then((text) => {
+//             // console.log(text);
 
-            if (text === "recorded") sessionStorage.setItem("visit", text);
-            else throw "backend err";
-        })
-        .catch((err) => {
-            sessionStorage.setItem("visit", err);
-        });
-}
+//             if (text === "recorded") sessionStorage.setItem("visit", text);
+//             else throw "backend err";
+//         })
+//         .catch((err) => {
+//             sessionStorage.setItem("visit", err);
+//         });
+// }

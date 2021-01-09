@@ -88,10 +88,10 @@ clfForm.addEventListener("submit", (e) => {
             // *
             else
                 clfDiv.innerHTML =
-                    "<p class='alarming-text'>INTERNAL ERROR, <a href='/pages/contact' class='report-href' target='_blank'>Please report</a> this to us</p>";
+                    "<p class='alarming-text'>INTERNAL ERROR, <a href='/contact.html' class='report-href' target='_blank'>Please report</a> this to us</p>";
         else
             clfDiv.innerHTML =
-                "<p class='alarming-text'>INTERNAL ERROR, <a href='/pages/contact' class='report-href' target='_blank'>Please report</a> this to us</p>";
+                "<p class='alarming-text'>INTERNAL ERROR, <a href='/contact.html' class='report-href' target='_blank'>Please report</a> this to us</p>";
     }
 });
 
@@ -205,10 +205,10 @@ clsForm.addEventListener("submit", (e) => {
             // *
             else
                 clsDiv.innerHTML =
-                    "<p class='alarming-text'>INTERNAL ERROR, <a href='/pages/contact' class='report-href' target='_blank'>Please report</a> this to us</p>";
+                    "<p class='alarming-text'>INTERNAL ERROR, <a href='/contact.html' class='report-href' target='_blank'>Please report</a> this to us</p>";
         else
             clsDiv.innerHTML =
-                "<p class='alarming-text'>INTERNAL ERROR, <a href='/pages/contact' class='report-href' target='_blank'>Please report</a> this to us</p>";
+                "<p class='alarming-text'>INTERNAL ERROR, <a href='/contact.html' class='report-href' target='_blank'>Please report</a> this to us</p>";
     }
 });
 
@@ -285,10 +285,10 @@ vlsmForm.addEventListener("submit", (e) => {
             //*
             else
                 vlsmChunksDiv.innerHTML =
-                    "<p class='alarming-text'>INTERNAL ERROR, <a href='/pages/contact' class='report-href' target='_blank'>Please report</a> this to us</p>";
+                    "<p class='alarming-text'>INTERNAL ERROR, <a href='/contact.html' class='report-href' target='_blank'>Please report</a> this to us</p>";
         else
             vlsmChunksDiv.innerHTML =
-                "<p class='alarming-text'>INTERNAL ERROR, <a href='/pages/contact' class='report-href' target='_blank'>Please report</a> this to us</p>";
+                "<p class='alarming-text'>INTERNAL ERROR, <a href='/contact.html' class='report-href' target='_blank'>Please report</a> this to us</p>";
     }
 });
 
