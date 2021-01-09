@@ -2,20 +2,22 @@ const iteration = 1;
 let CACHE_STATIC_NAME = "static" + iteration;
 let CACHE_DYNAMIC_NAME = "dynamic" + iteration;
 
+staticCache = [
+    "/app.html",
+    "/js/index.js",
+    "/js/app.js",
+    "/js/app_style.js",
+    "/css/style.css",
+    "/css/app.css",
+    "/css/fontawesome_free_5.13.0_we_all.min.css",
+];
+
 self.addEventListener("install", function (event) {
     console.log("[Service Worker] Installing Service Worker ...", event);
     event.waitUntil(
         caches.open(CACHE_STATIC_NAME).then(function (cache) {
             console.log("[Service Worker] Precaching App Shell");
-            cache.addAll([
-                "/",
-                "/index.html",
-                "/js/index.js",
-                "/js/style.js",
-                "/css/index.css",
-                "/css/fontawesome_free_5.13.0_we_all.min.css",
-                "/assets/fonts/fontawesome_free_5.13.0_web/fa-solid-900.woff2",
-            ]);
+            cache.addAll(staticCache);
         })
     );
 });
