@@ -1,0 +1,42 @@
+{
+    "name": "Eazy IP",
+    "short_name": "Eazy IP",
+    "icons":[
+
+        {
+            "src": "assets/img/logo1.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/logo2.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/logo22.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/logo3.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/logo4.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/logo5.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "orientation":  "portrait",
+    "background_color": "#03254c",
+    "theme_color": "#1167b1"
+}

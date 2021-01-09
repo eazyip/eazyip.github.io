@@ -1,0 +1,207 @@
+/* ******************************************************* */
+/* MAIN */
+/* ******************************************************* */
+body {
+    min-height: 100vh;
+    background: url(./../assets/img/bg2.png) no-repeat center center / cover;
+}
+
+#nav-options,
+footer {
+    display: none;
+}
+
+main {
+    padding: 2rem 0;
+    background-attachment: fixed;
+}
+
+.soft-container {
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 9px;
+    background: #fff;
+    margin: 1rem 0;
+}
+
+.report-href,
+a.report-href {
+    font-weight: 550;
+    text-decoration: underline;
+}
+
+.js-add-subnet,
+.js-remove-subnet {
+    cursor: pointer;
+    color: var(--complementary-color11);
+    font-size: 1.1rem;
+    padding: 0.2rem;
+}
+
+.js-add-subnet:hover,
+.js-remove-subnet:hover {
+    color: var(--complementary-color21);
+}
+
+main div.max-width-container {
+    padding: 0 1rem;
+}
+
+#options {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 5px 5px 0px 0px;
+}
+
+div#options > div {
+    display: block;
+    background: var(--primary-color2);
+    padding: 0.6rem 0.4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+#options > *:hover {
+    background: var(--primary-color1);
+}
+
+div#options div.current-option {
+    background: var(--primary-color3);
+}
+
+div#options > div:first-child {
+    border-radius: 8px 0px 0px 0px;
+}
+div#options > div:last-child {
+    border-radius: 0px 8px 0px 0px;
+}
+
+#clf-addr,
+#cls-addr,
+#vlsm {
+    padding: 1rem 1rem 3rem 1rem;
+    background: var(--primary-color3);
+    border-radius: 12px;
+}
+
+@media (max-width: 550px) {
+    div#options > div {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .soft-container {
+        padding: 0.8rem 0.5rem;
+    }
+
+    main div.max-width-container {
+        padding: 0 0.3rem;
+    }
+
+    div#options > div {
+        padding: 0.4rem 0.3rem;
+        font-size: 1rem;
+    }
+
+    #clf-addr,
+    #cls-addr,
+    #vlsm {
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+    }
+}
+
+/* ************************** */
+/* formes */
+/* ************************** */
+
+.short-input {
+    width: 2.5rem;
+}
+
+label {
+    display: inline-block;
+    margin-top: 0.8rem;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid var(--complementary-color11);
+    padding: 0.4rem 0.2rem;
+    margin: 0 0 0.2rem 0;
+    font-size: 1rem;
+    max-width: 200px;
+    background-color: rgba(247, 247, 247, 0.9);
+}
+
+input:focus {
+    border-bottom: 3px solid var(--complementary-color21);
+}
+
+/* ************************** */
+/* tables */
+/* ************************** */
+
+table.long-table {
+    border: var(--primary-color4) solid 1px;
+}
+
+tr:nth-child(odd) {
+    background-color: #e1e1e1;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+td,
+th {
+    padding: 0.3rem;
+}
+
+.long-table th,
+.long-table td {
+    border-left: 1px #888 dotted;
+    border-right: 1px #888 dotted;
+    max-width: 145px;
+}
+
+.long-table th {
+    background-color: var(--primary-color4);
+    color: #fff;
+}
+
+.properties-table th {
+    text-align: left;
+    color: var(--primary-color4);
+}
+
+.js-extra {
+    background: rgb(255, 120, 120) !important;
+}
+
+.js-focused-subnet {
+    background: rgb(120, 120, 255) !important;
+}
+
+.scroll {
+    width: calc(var(100% - 20px));
+    overflow: auto;
+    white-space: nowrap;
+    margin: auto;
+}
+
+@media (max-width: 480px) {
+    td,
+    th {
+        padding: 0.2rem;
+    }
+
+    .properties-table th,
+    .properties-table td {
+        display: inline-block;
+    }
+}

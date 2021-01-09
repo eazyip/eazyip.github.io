@@ -1,0 +1,217 @@
+#rad {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60vh;
+    width: 100%;
+    z-index: -1;
+    background-image: url(/assets/img/bg3.png);
+    background-size: 100% 98%;
+    background-repeat: no-repeat;
+}
+
+#showcase {
+    height: 80vh;
+    min-height: 350px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem 2rem 2rem;
+}
+
+#showcase-text {
+    max-width: 35%;
+}
+
+#showcase-text > h1 {
+    font-family: "Goldman", cursive;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#showcase-text > p {
+    margin-bottom: 2rem;
+}
+
+.inactive-app {
+    font-weight: 600;
+    padding: 0.3rem 1.2rem;
+    border-radius: 30px;
+    background-color: var(--primary-color4);
+    background-image: var(--incative-app-gradient);
+    box-shadow: var(--inactive-app-shadow);
+    color: var(--complementary-color11);
+}
+
+.inactive-app:hover {
+    background-image: var(--incative-app-hover-gradient);
+    color: var(--primary-color4);
+}
+
+#showcase-img {
+    margin-top: 2rem;
+    max-width: 60%;
+}
+
+#services {
+    background: linear-gradient(
+        #fff,
+        var(--primary-color3),
+        var(--primary-color2)
+    );
+    padding: 1rem 0;
+}
+
+#services .max-width-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#services .max-width-container > div {
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    width: 20%;
+    min-width: 180px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+    /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+    /* box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; */
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+#services .max-width-container .rounded {
+    background: -webkit-linear-gradient(
+        var(--primary-color),
+        var(--primary-color4)
+    );
+    color: #fff;
+    height: 85px;
+    width: 85px;
+    border-radius: 100px;
+    margin: 0 auto 1rem auto;
+    /* just for centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#services .max-width-container p {
+    color: var(--primary-color4);
+}
+
+#install {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+#install-img {
+    width: 60%;
+    max-width: 550px;
+    margin-right: 2rem;
+}
+
+#install-text > p {
+    font-size: 1.1rem;
+    line-height: 180%;
+}
+
+#install-text > i {
+    color: var(--primary-color4);
+    margin: 0.5rem;
+}
+
+#about {
+    text-align: center;
+    background: url(/assets/img/aboutDiv.jpg) no-repeat center center / cover;
+    min-height: 450px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-text {
+    color: #fff;
+    padding: 3rem 1rem 2rem 1rem;
+    text-shadow: var(--complementary-color22) 1px 1px 2px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 180%;
+}
+
+#about-btns {
+    padding: 0rem 0rem 2rem 0rem;
+}
+
+@media (max-width: 550px) {
+    #rad {
+        background-image: url(/assets/img/gb2.png);
+        background-size: 100% 100%;
+    }
+
+    #showcase {
+        display: block;
+    }
+
+    #showcase-text {
+        text-align: center;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    #showcase-text > a {
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+    #showcase-img {
+        margin: 2rem auto 0 auto;
+    }
+    #showcase-img {
+        max-width: 85%;
+    }
+
+    #services .max-width-container {
+        padding: 0;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    #services .max-width-container > div {
+        text-align: left;
+        width: 98%;
+        margin: 0.5rem auto;
+        display: flex;
+    }
+
+    #services .max-width-container .rounded {
+        margin: 0;
+        flex-basis: 85px;
+    }
+
+    #services .max-width-container > div > div:last-child {
+        width: 240px;
+        padding-left: 1rem;
+    }
+
+    #install {
+        flex-flow: column-reverse wrap;
+        align-content: center;
+        margin-top: 0rem;
+        text-align: center;
+    }
+
+    #install-img {
+        width: 100%;
+        margin: 1rem auto;
+    }
+}

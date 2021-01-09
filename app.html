@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+            name="description"
+            content="This application offers tools for network engineers to make IPv4 easy, smooth & flawless. One of the most obvious service is a VLSM calculator"
+        />
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/app.css" />
+        <link
+            rel="stylesheet"
+            href="/css/fontawesome_free_5.13.0_we_all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Goldman&family=Nunito:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+
+        <title>Eazy IP | APP</title>
+
+        <link rel="manifest" href="/manifest.json" />
+        <link
+            rel="apple-touch-icon"
+            href="/assets/img/logo22.png"
+            sizes="144x144"
+        />
+        <meta name="theme-color" content="#1167b1" />
+        <script
+            data-ad-client="ca-pub-9350489272916133"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="max-width-container">
+                    <div>
+                        <a id="" class="logo" href="/index.html">Eazy IP</a>
+                    </div>
+                    <div id="nav-options">
+                        <a id="js-nav-home" class="" href="/index.html">Home</a>
+                        <a id="js-nav-about" class="" href="/about.html"
+                            >About</a
+                        >
+                        <a id="js-nav-contact" class="" href="/contact.html"
+                            >Contact</a
+                        >
+                        <a id="js-nav-app" class="inactive-app" href="/app.html"
+                            >APP</a
+                        >
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="max-width-container">
+                <div id="options">
+                    <div id="clf-option">Classful address</div>
+                    <div id="cls-option">Classless address</div>
+                    <div id="vlsm-option" class="current-option">VLSM</div>
+                </div>
+
+                <div id="clf-addr" class="hidden">
+                    <form id="js-clf-addressing" class="soft-container">
+                        <p>Collect the network's info of the given address</p>
+                        <label for="clf-addr"
+                            >Classful
+                            <span class="colored-text">IPv4 address</span
+                            >:</label
+                        ><br />
+                        <input
+                            type="text"
+                            id="js-clf-address"
+                            name="clf-addr"
+                            placeholder="i.e. 192.168.1.2"
+                            required
+                        />
+                        <br />
+                        <button type="submit" class="btn">Get info</button>
+                    </form>
+                    <div class="soft-container">
+                        <span class="colored-text">Subnet</span>
+                        info
+                        <div id="js-clf-info"></div>
+                    </div>
+                </div>
+
+                <div id="cls-addr" class="hidden">
+                    <form id="js-cls-addressing" class="soft-container">
+                        <p>
+                            Collect the subnets' info of the given unicast
+                            address
+                        </p>
+                        <label for="cls-addr"
+                            >Classless
+                            <span class="colored-text">IPv4 address</span
+                            >:</label
+                        ><br />
+                        <input
+                            type="text"
+                            id="js-cls-address"
+                            name="cls-addr"
+                            placeholder="i.e. 192.168.1.34"
+                            required
+                        />
+                        <br />
+                        <label for="cls-mask-or-prefix">
+                            <span class="colored-text">Mask</span> or
+                            <span class="colored-text">Prefix</span>:</label
+                        ><br />
+                        <input
+                            type="text"
+                            id="js-cls-mask-or-prefix"
+                            name="cls-mask-or-prefix"
+                            placeholder="i.e. 255.255.255.240 || /28"
+                            required
+                        />
+                        <br />
+                        <button type="submit" class="btn">Get info</button>
+                    </form>
+                    <div class="soft-container">
+                        <span class="colored-text">Subnet</span>
+                        info
+                        <div id="js-cls-info"></div>
+                    </div>
+                    <div class="soft-container">
+                        <div id="js-cls-neighbors-info">
+                            (Extra)
+                            <span class="colored-text"
+                                >Possible adjacent subnets details</span
+                            >
+                            in the /8, /16 or /24 container subnet
+                        </div>
+                    </div>
+                    <div class="soft-container">
+                        <div id="js-cls-upper-prefixes-neighbors">
+                            (Extra)
+                            <span class="colored-text"
+                                >Possible adjacent subnets
+                            </span>
+                            in container subnets with a variation of prefixes
+                        </div>
+                    </div>
+                </div>
+
+                <div id="vlsm">
+                    <form id="js-vlsm" class="soft-container">
+                        <label for="js-vlsm-network"
+                            ><span class="colored-text">Main subnet</span>
+                            address in CIDR notation:</label
+                        ><br />
+                        <input
+                            type="text"
+                            id="js-vlsm-network"
+                            placeholder="i.e. 10.0.0.0/25"
+                            required
+                        /><br />
+                        <label>
+                            <span class="colored-text">Subnet chunks</span>
+                            (optional chunk name & hosts per subnet):</label
+                        ><br />
+                        <div id="js-vlsm-inputs">
+                            <div>
+                                <input
+                                    type="text"
+                                    class="js-vlsm-names"
+                                    aria-label="The subnet name"
+                                    value="(nameless)"
+                                />
+                                <input
+                                    type="text"
+                                    class="js-vlsm-subnets short-input"
+                                    aria-label="The subnet size"
+                                    placeholder="5"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    type="text"
+                                    class="js-vlsm-names"
+                                    aria-label="The subnet name"
+                                    value="(nameless)"
+                                />
+                                <input
+                                    type="text"
+                                    class="js-vlsm-subnets short-input"
+                                    aria-label="The subnet size"
+                                    placeholder="13"
+                                    required
+                                />
+                                <i class="js-add-subnet fas fa-plus-circle"></i>
+                            </div>
+                            <div id="vlsm-ref-input">
+                                <input
+                                    type="text"
+                                    class="js-vlsm-names"
+                                    aria-label="The subnet name"
+                                    value="(nameless)"
+                                />
+                                <input
+                                    type="text"
+                                    class="js-vlsm-subnets short-input"
+                                    aria-label="The subnet size"
+                                    placeholder="19"
+                                    required
+                                />
+                                <i class="js-add-subnet fas fa-plus-circle"></i>
+                                <i
+                                    class="js-remove-subnet fas fa-minus-circle"
+                                ></i>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn">Get results</button>
+                    </form>
+                    <div class="soft-container">
+                        <div id="js-vlsm-chunks"></div>
+                    </div>
+                </div>
+
+                <!-- <h1>Supernetting</h1> -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="max-width-container">
+                <div>
+                    <a href="/index.html" class="logo">Eazy IP</a>
+                    <p>Copyright <i class="fal fa-copyright"></i>2021</p>
+                </div>
+                <div>
+                    <a href="/app.html">APP</a>
+                    <a href="/index.html">Home</a>
+                    <a href="/about.html">About</a>
+                    <a href="/contact.html">Contact</a>
+                    <a href="#">Offer support</a>
+                </div>
+                <div>
+                    <a href="https://linkedin.com/in/medilies" target="_Blank"
+                        ><i class="fab fa-linkedin fa-1x fa-2x"></i>/medilies</a
+                    >
+                    <a href="https://github.com/medilies" target="_Blank"
+                        ><i class="fab fa-github fa-2x"></i>/medilies</a
+                    >
+                    <a href="mailto:medilies.contact@gmail.com" target="_Blank"
+                        ><i class="fal fa-at fa-2x"></i
+                        >medilies.contact@gmail.com</a
+                    >
+                </div>
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script> -->
+
+        <script src="/js/index.js"></script>
+
+        <script src="/js/app.js"></script>
+        <script src="/js/app_style.js"></script>
+    </body>
+</html>
