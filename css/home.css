@@ -153,7 +153,7 @@
 
 @media (max-width: 550px) {
     #rad {
-        background-image: url(/assets/img/gb2.png);
+        background-image: url(/assets/img/gb2_compressed.png);
         background-size: 100% 100%;
     }
 
