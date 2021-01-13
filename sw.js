@@ -1,4 +1,4 @@
-const iteration = 5;
+const iteration = 6;
 let CACHE_STATIC_NAME = "static" + iteration;
 let CACHE_DYNAMIC_NAME = "dynamic" + iteration;
 

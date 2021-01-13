@@ -87,6 +87,12 @@
             <div class="pad1xy">
                 <form method="post" id="contact-form" class="pad1xy">
                     <input
+                        name="_redirect"
+                        type="hidden"
+                        value="https://eazyip.github.io"
+                    />
+
+                    <input
                         type="text"
                         name="name"
                         id="name"
@@ -114,7 +120,15 @@
                         aria-label="Message"
                         required
                     ></textarea>
+
                     <div id="js-contact-msg-status"></div>
+
+                    <input
+                        name="_formsubmit_id"
+                        type="text"
+                        style="display: none"
+                    />
+
                     <button
                         type="submit"
                         name="contact_msg"

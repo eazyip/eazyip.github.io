@@ -2,35 +2,28 @@ const contactForm = document.querySelector("#contact-form");
 const contactMsgStatus = document.querySelector("#js-contact-msg-status");
 const contactSubmitBtn = document.querySelector("#js-contact-submit-btn");
 
-// Disable contact
-contactSubmitBtn.classList.add("disabled-btn");
-contactMsgStatus.innerHTML =
-    "<p class='alarming-text'>This option is unavailable! please try another medium to pass your massege (An email maybe)</p>";
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-// contactForm.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     if (contactSubmitBtn.classList.contains("disabled-btn")) return;
+    contactSubmitBtn.style.display = "none";
 
-//     contactSubmitBtn.classList.add("disabled-btn");
+    const formData = new FormData(contactForm);
 
-//     const formData = new FormData(contactForm);
-
-//     fetch(`${window.location.origin}/apis/contact`, {
-//         method: "post",
-//         body: formData,
-//     })
-//         .then((res) => res.text())
-//         .then((text) => {
-//             if (text === "nice msg") {
-//                 contactMsgStatus.innerHTML =
-//                     "<p class='success-text'>We recieved your message. Thank you :)</p>";
-//                 contactSubmitBtn.classList.remove("disabled-btn");
-//             } else if (text !== "nice msg") {
-//                 throw "backend err";
-//             }
-//         })
-//         .catch(() => {
-//             contactMsgStatus.innerHTML =
-//                 "<p class='alarming-text'>A server error happened! please try another medium to pass your massege (An email maybe)</p>";
-//         });
-// });
+    fetch("https://formsubmit.io/send/c31046ea-9e1f-4bb6-8150-cd6b88af1020", {
+        mode: "cors",
+        method: "post",
+        body: formData,
+    })
+        .then((res) => {
+            if (res.status < 400) {
+                contactMsgStatus.innerHTML =
+                    "<p class='success-text'>We recieved your message. Thank you :)</p>";
+            } else {
+                throw "backend err";
+            }
+        })
+        .catch(() => {
+            contactMsgStatus.innerHTML =
+                "<p class='alarming-text'>A server error happened! please try another medium to pass your massege (A direct email maybe)</p>";
+        });
+});
