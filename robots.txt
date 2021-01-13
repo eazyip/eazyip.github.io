@@ -7,3 +7,4 @@ Disallow: /*.woff
 Disallow: /*.woff2
 Disallow: /*.svg
 Allow: /*.html
+Allow: /*fb_large_thumb.png
