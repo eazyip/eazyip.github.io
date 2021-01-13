@@ -1,8 +1,7 @@
 {
-    "name": "Eazy IP",
+    "name": "Eazy IP: Network engineer toolkit",
     "short_name": "Eazy IP",
-    "icons":[
-
+    "icons": [
         {
             "src": "assets/img/logo1.png",
             "sizes": "512x512",
@@ -36,7 +35,7 @@
     ],
     "start_url": "/app.html",
     "display": "standalone",
-    "orientation":  "portrait",
+    "orientation": "portrait",
     "background_color": "#03254c",
     "theme_color": "#1167b1"
 }

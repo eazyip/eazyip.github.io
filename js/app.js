@@ -380,6 +380,8 @@ function prefixRangeValidty(prefix) {
 }
 
 /**
+ * **SUGGEST** valid addr ?
+ *
  * @param {string[]} ip
  * @param {number} intrestOctInd
  * @param {number} blockSize **THE ONE OBTAINED FROM MASK**
