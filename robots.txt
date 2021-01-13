@@ -1,1 +1,11 @@
-# User-agent: *
+User-agent: *
+Disallow: /*.png
+Disallow: /*.jpg
+Disallow: /*.ttf
+Disallow: /*.woff
+Disallow: /*.woff2
+Disallow: /*.svg
+Allow: /*.html
+
+User-agent: Twitterbot
+Disallow:
