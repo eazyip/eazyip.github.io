@@ -5,9 +5,14 @@
     "icons": [
         {
             "src": "/assets/img_pwa/maskable_icon_1.png",
-            "sizes": "512x512",
+            "sizes": "568x568",
             "type": "image/png",
             "purpose": "maskable"
+        },
+        {
+            "src": "assets/img/logo1.png",
+            "sizes": "512x512",
+            "type": "image/png"
         },
         {
             "src": "/assets/img_pwa/logo2.png",
