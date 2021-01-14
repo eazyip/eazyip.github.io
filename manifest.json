@@ -1,38 +1,72 @@
 {
     "name": "Eazy IP: Network engineer toolkit",
     "short_name": "Eazy IP",
+    "categories": ["Tools", "Productivity"],
     "icons": [
         {
-            "src": "assets/img/logo1.png",
+            "src": "/assets/img_pwa/maskable_icon_1.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "maskable"
         },
         {
-            "src": "assets/img/logo2.png",
+            "src": "/assets/img_pwa/logo2.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "assets/img/logo22.png",
+            "src": "/assets/img_pwa/logo22.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "assets/img/logo3.png",
+            "src": "/assets/img_pwa/logo3.png",
             "sizes": "152x152",
             "type": "image/png"
         },
         {
-            "src": "assets/img/logo4.png",
+            "src": "/assets/img_pwa/logo4.png",
             "sizes": "64x64",
             "type": "image/png"
         },
         {
-            "src": "assets/img/logo5.png",
+            "src": "/assets/img_pwa/logo5.png",
             "sizes": "32x32",
             "type": "image/png"
         }
     ],
+    "screenshots" : [
+        {
+          "src": "/assets/img_pwa/screenshot_clf1.png",
+          "sizes": "1080x1944",
+          "type": "image/png"
+        },
+        {
+          "src": "/assets/img_pwa/screenshot_cls1.png",
+          "sizes": "1536x2047",
+          "type": "image/png"
+        },
+        {
+          "src": "/assets/img_pwa/screenshot_vlsm1.png",
+          "sizes": "1125x2436",
+          "type": "image/png"
+        },
+        {
+          "src": "/assets/img_pwa/screenshot_vlsm2.png",
+          "sizes": "1125x2976",
+          "type": "image/png"
+        },
+        {
+          "src": "/assets/img_pwa/screenshot_vlsm3.png",
+          "sizes": "1536x2048",
+          "type": "image/png"
+        },
+        {
+          "src": "/assets/img_pwa/screenshot_vlsm4.png",
+          "sizes": "1080x1920",
+          "type": "image/png"
+        }
+      ],
     "start_url": "/app.html",
     "display": "standalone",
     "orientation": "portrait",
