@@ -1,7 +1,7 @@
 {
     "name": "Eazy IP: Network engineer toolkit",
     "short_name": "Eazy IP",
-    "categories": ["Tools", "Productivity"],
+    "categories": ["tools", "productivity"],
     "icons": [
         {
             "src": "/assets/img_pwa/maskable_icon_1.png",
@@ -10,7 +10,7 @@
             "purpose": "maskable"
         },
         {
-            "src": "assets/img/logo1.png",
+            "src": "assets/img_pwa/logo1.png",
             "sizes": "512x512",
             "type": "image/png"
         },
